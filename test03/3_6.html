@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  	<title>form属性示例</title>
+  	<meta charset="UTF-8">
+</head>
+<body>
+	<form id="testform" method="get" action="">
+		
+
+		<fieldset style="width:500px;" >
+			<legend style="color:red;">自我介绍</legend>
+			姓&nbsp;&nbsp;名：<input type="text" name="name1" 
+		autofocus="autofocus" required="required"
+		 placeholder="请输入姓名"/>
+		<input type="submit" value="提交"/>
+		</fieldset>
+	</form>
+	<br/>
+	<input type="file" name="file1" multiple="">
+	<br>
+	自我介绍：<textarea name="textarea1" form="testform"></textarea>
+	<!-- 将多个表单的id写入form属性 -->
+	<!-- required属性 规定的输入域内必须填写 -->
+	<!-- placeholder属性 没有值时在文本框出现的字符 获取焦点是消失 -->
+</body>
+</html>
