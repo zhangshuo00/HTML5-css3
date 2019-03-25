@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task02</title>
+    <style>
+        p{margin: 0;}
+        ul,li{
+            list-style: none;
+            float: left;
+            padding-left: 0;
+            padding-top: 5px;
+            margin: 0 auto;
+        }
+        li{
+            background-color: gainsboro;
+            margin-right: 15px;
+        }
+        .div{
+            width:300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="serach" id="search">
+        <input type="button" value="搜索" style="width:100px;" id="submit" onclick="saveStorage('search')">
+    </form>
+    <p>最近搜索</p>
+    <input type="button" value="X" onclick="clearStorage('div')">
+    <div id="div" class="div"></div>
+</body>
+<script type="text/javascript">
+    var array = [];
+    function saveStorage(id){
+        var b=0;
+        var keyword = document.getElementById(id).value;
+        for(var i=0;i<localStorage.length;i++){
+            var key = localStorage.key(i);
+            var data = localStorage.getItem(key);
+            array[i]=data;
+        }
+        for(var i=0;i<array.length;i++){
+            if(array[i] == keyword){b++;}
+        }
+        if(!b){
+            var time = new Date().getTime();//获取当前时间
+            localStorage.setItem(time,keyword);
+            loadStorage('div');
+        }
+    }
+    function loadStorage(id){
+        var result = "<ul>";
+        for(var i = 0;i<localStorage.length;i++){
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            result += '<li>' + value + '</li>';
+        }
+        result += '</ul>';
+        var target = document.getElementById(id);
+        target.innerHTML = result;
+    }
+    function clearStorage(id){//清除记录
+        localStorage.clear();
+        loadStorage('div');
+    }
+</script>
+</html>
