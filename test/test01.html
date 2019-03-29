@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="01.js"></script>
 </head>
 <body>
     <p>上传头像</p>
-    <div></div>
+    <div ondragover="allowDrop(event)" ondrop="drop(event)"></div>
 </body>
+<script type="text/javascript">
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    function allowDrop(ev){
+        ev.preventDefault();//取消默认事件处理
+    }
+</script>
 </html>
