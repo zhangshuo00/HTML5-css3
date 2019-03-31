@@ -5,20 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="01.js"></script>
+    <!-- <script src="01.js"></script> -->
+    <style>
+        #dropBox{
+            width:300px;
+            height: 300px;
+            border:1px solid red;
+            background-repeat: no-repeat;
+            /* background-size: 100%; */
+        }
+    </style>
 </head>
 <body>
     <p>上传头像</p>
-    <div ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div id="dropBox"></div>
 </body>
 <script type="text/javascript">
+    var dropBox = document.getElementById('dropBox');
+    window.onload = function(){
+        dropBox.ondragenter = allowDrop();
+        dropBox.ondragover = allowDrop();
+        dropBox.ondrop = drop();
+    }
     function drop(ev) {
         ev.preventDefault();
-        var data = ev.dataTransfer.getData("Text");
+        ev.stopPropagation();
+        //var data = ev.dataTransfer.getData("Text");
         ev.target.appendChild(document.getElementById(data));
+
+        var file = ev.dataTransfer.files[0];
+        var reader = new FileReader();
+        reader.onload = function(ev){
+            dropBox.style.backgroundImage = "url('"+ ev.target.result+"')";
+        }
+        reader.readAsDataURL(file);
     }
     function allowDrop(ev){
         ev.preventDefault();//取消默认事件处理
+        ev.stopPropagation();
     }
 </script>
 </html>
