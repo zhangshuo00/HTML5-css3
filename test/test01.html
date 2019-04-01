@@ -21,28 +21,50 @@
     <div id="dropBox"></div>
 </body>
 <script type="text/javascript">
-    var dropBox = document.getElementById('dropBox');
-    window.onload = function(){
-        dropBox.ondragenter = allowDrop();
-        dropBox.ondragover = allowDrop();
-        dropBox.ondrop = drop();
-    }
-    function drop(ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        //var data = ev.dataTransfer.getData("Text");
-        ev.target.appendChild(document.getElementById(data));
+    // var dropBox = document.getElementById('dropBox');
+    // window.onload = function(){
+    //     dropBox.ondragenter = allowDrop();
+    //     dropBox.ondragover = allowDrop();
+    //     dropBox.ondrop = drop();
+    // }
+    // function drop(ev) {
+    //     ev.preventDefault();
+    //     ev.stopPropagation();
+    //     //var data = ev.dataTransfer.getData("Text");
+    //     ev.target.appendChild(document.getElementById(data));
 
-        var file = ev.dataTransfer.files[0];
-        var reader = new FileReader();
-        reader.onload = function(ev){
-            dropBox.style.backgroundImage = "url('"+ ev.target.result+"')";
-        }
-        reader.readAsDataURL(file);
+    //     var file = ev.dataTransfer.files[0];
+    //     var reader = new FileReader();
+    //     reader.onload = function(ev){
+    //         dropBox.style.backgroundImage = "url('"+ ev.target.result+"')";
+    //     }
+    //     reader.readAsDataURL(file);
+    // }
+    // function allowDrop(ev){
+    //     ev.preventDefault();//取消默认事件处理
+    //     ev.stopPropagation();
+    // }
+
+    var dropBox = document.getElementById('dropBox');
+    document.ondragover = function(e){
+        e.preventDefault();
     }
-    function allowDrop(ev){
-        ev.preventDefault();//取消默认事件处理
-        ev.stopPropagation();
+    document.ondrop = function(e){
+        e.preventDefault();
+    }
+    dropBox.ondragover = function(e){
+        e.preventDefault();
+    }
+    dropBox.ondrop = function(e){
+        console.log("释放图片");
+        var file = e.dataTransfer.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function(e){
+            var img = new Image();
+            img.src = reader.result;
+            dropBox.appendChild(img);
+        }
     }
 </script>
 </html>
