@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- <script src="01.js"></script> -->
+    <script src="01.js"></script>
     <style>
         #dropBox{
             width:300px;
@@ -45,26 +45,6 @@
     //     ev.stopPropagation();
     // }
 
-    var dropBox = document.getElementById('dropBox');
-    document.ondragover = function(e){
-        e.preventDefault();
-    }
-    document.ondrop = function(e){
-        e.preventDefault();
-    }
-    dropBox.ondragover = function(e){
-        e.preventDefault();
-    }
-    dropBox.ondrop = function(e){
-        console.log("释放图片");
-        var file = e.dataTransfer.files[0];
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function(e){
-            var img = new Image();
-            img.src = reader.result;
-            dropBox.appendChild(img);
-        }
-    }
+    
 </script>
 </html>
