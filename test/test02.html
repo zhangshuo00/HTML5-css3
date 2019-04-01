@@ -19,6 +19,13 @@
 <script>
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
+    context.moveTo(50,50);
+    context.lineTo(50,250);
+    context.lineTo(250,50);
+    context.lineTo(50,50);
     
+    // context.lineWidth = 10;
+    // context.strokeStyle = 'blue';
+    context.stroke();//必须写在线条样式的后面，否则效果不起作用
 </script>
 </html>
