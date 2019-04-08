@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000">
+        你的浏览器不支持canvas
+    </canvas>
+</body>
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    // context.beginPath();
+    // context.moveTo(100,100);
+    // context.lineTo(100,400);
+    // context.lineTo(400,400);
+    // context.lineTo(100,100);
+
+    // context.lineWidth = 5;
+    // context.strokeStyle = 'red';
+    // context.closePath();
+    // context.stroke();
+
+    // context.beginPath();
+    // context.moveTo(200,100);
+    // context.lineTo(500,400);
+    // context.strokeStyle = 'blue';
+    // context.stroke();
+    // context.closePath();
+
+    context.lineWidth = 3;
+    context.strokeStyle = 'red';
+    context.arc(200,200,100,0,1.5*Math.PI);
+    context.stroke();
+</script>
+</html>
