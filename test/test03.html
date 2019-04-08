@@ -30,12 +30,33 @@
     // context.moveTo(200,100);
     // context.lineTo(500,400);
     // context.strokeStyle = 'blue';
-    // context.stroke();
     // context.closePath();
+    // context.stroke();
+    
+    //绘制弧线
+    // context.beginPath();
+    // context.lineWidth = 3;
+    // context.strokeStyle = 'red';
+    // context.arc(200,200,100,0,1.5*Math.PI);//anticlockwise 是否按照逆时针方向绘图
+    // context.closePath();
+    // context.stroke();
 
-    context.lineWidth = 3;
-    context.strokeStyle = 'red';
-    context.arc(200,200,100,0,1.5*Math.PI);
-    context.stroke();
+    //绘制多段弧线
+    // for(var i = 0;i<10;i++){
+    //     context.beginPath();
+    //     context.arc(50+100*i,60,40,0,2*Math.PI*(i+1)/10);
+    //     context.closePath();
+    //     context.stroke();
+    // }
+
+    //绘制同心圆
+    for(var i = 1;i<9;i++){
+        context.beginPath();
+        context.arc(0,300,20*i,0,0.5*Math.PI,true);
+        context.stroke();
+    }
+
+    //绘制太极图
+    
 </script>
 </html>
