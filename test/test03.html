@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        canvas{
+            background-color:bisque;
+        }
+    </style>
 </head>
 <body>
     <canvas id="canvas" width="1000" height="1000">
@@ -50,13 +55,47 @@
     // }
 
     //绘制同心圆
-    for(var i = 1;i<9;i++){
-        context.beginPath();
-        context.arc(0,300,20*i,0,0.5*Math.PI,true);
-        context.stroke();
-    }
+    // for(var i = 1;i<9;i++){
+    //     context.beginPath();
+    //     context.arc(0,300,20*i,0,0.5*Math.PI,true);
+    //     context.stroke();
+    // }
 
     //绘制太极图
-    
+    context.beginPath();
+    context.arc(200,200,80,0.5*Math.PI,1.5*Math.PI,true);
+    context.fillStyle = 'white';
+    context.closePath();
+    context.fill();
+
+    context.beginPath();
+    context.arc(200,200,80,0.5*Math.PI,1.5*Math.PI);
+    context.fillStyle = 'black';
+    context.closePath();
+    context.fill();
+
+    context.beginPath();
+    context.arc(200,160,40,0.5*Math.PI,1.5*Math.PI);
+    context.fillStyle = 'white';
+    context.closePath();
+    context.fill();
+
+    context.beginPath();
+    context.arc(200,240,40,0.5*Math.PI,1.5*Math.PI,true);
+    context.fillStyle = 'black';
+    context.closePath();
+    context.fill();
+
+    context.beginPath();
+    context.arc(200,160,5,0,2*Math.PI);
+    context.fillStyle = 'black';
+    context.closePath();
+    context.fill();
+    context.beginPath();
+    context.arc(200,240,5,0,2*Math.PI);
+    context.fillStyle = 'white';
+    context.closePath();
+    context.fill();
+
 </script>
 </html>
