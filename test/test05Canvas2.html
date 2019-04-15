@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>渐变色</title>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
 </body>
 <script>
-    
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    var gradient = context.createLinearGradient(0,0,400,0);
+    gradient.addColorStop("0","magenta");
+    gradient.addColorStop('0.5','blue');
+    gradient.addColorStop('1','red');
+    context.strokeStyle = gradient;
+    context.lineWidth = 5;
+    context.strokeRect(50,50,350,200);
+    context.font = '50px Verdana';
+    context.strokeText('hello canvas',70,120);
 </script>
 </html>
