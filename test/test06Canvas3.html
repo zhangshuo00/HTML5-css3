@@ -8,6 +8,7 @@
 </head>
 <body>
     <canvas id="canvas" width="1024" height="700"></canvas>
+    <input type="range" id="range" min="0.5" max="1.5" value="1" step="0.01"> 
 </body>
 <script>
     window.onload = function(){
@@ -20,5 +21,9 @@
             context.drawImage(img, 0, 0, 200, 200, 0, 0, 500, 500);
         }
     }
+
+    // var range = document.getElementById('range');
+    // var canvas = document.getElementById('canvas');
+    // var context = canvas.getContext('2d');
 </script>
 </html>
