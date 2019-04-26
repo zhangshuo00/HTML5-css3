@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易画布抽奖</title>
+		<style type="text/css">
+			/*两个元素都定位,画布在上面*/
+			#con{
+				width: 300px;
+				height: 150px;
+				position: absolute;
+				text-align: center;
+				line-height: 150px;
+				font-size: 24px;
+				
+			}
+			#cvs{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="con">ssss</div>
+		<canvas id="cvs" width="300" height="150"></canvas>
+		
+	</body>
+	<script type="text/javascript">
+		var con=document.getElementById("con");
+		var cvs=document.getElementById("cvs");
+		var ctx=cvs.getContext("2d");
+		//创建一个数组，里面写入各种奖项
+		var arr=["一等奖","二等奖","三等奖","鼓励奖","特等大奖","谢谢惠顾"];
+		var i=Math.floor(Math.random()*arr.length);
+		con.innerHTML=arr[i];
+		
+		//画布上色 把奖项盖住
+		ctx.beginPath();
+		ctx.fillStyle="#CCCCCC";
+		ctx.fillRect(0,0,300,150);
+		ctx.closePath();
+		
+		cvs.onmousedown=function(){
+			document.onmousemove=function(e){
+				ctx.clearRect(e.clientX-cvs.offsetLeft,e.clientY-cvs.offsetTop,10,10)
+				
+			}
+			document.onmouseup=function(){
+				document.onmousedown=null;
+				document.onmousemove=null
+			}
+		}
+		
+	</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
