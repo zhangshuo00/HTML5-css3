@@ -27,5 +27,13 @@
 
     context.fillStyle = 'gray';
     context.fillRect(0,0,600,400);
+    // 以指针的坐标做圆
+    var fillCircle = function(x,y,radius){
+        this.fillStyle = '#eee';
+        this.beginPath();
+        this.moveTo(x,y);
+        this.arc(x,y,radius,0,Math.PI*2,false);
+        this.fill();
+    }
 </script>
 </html>
