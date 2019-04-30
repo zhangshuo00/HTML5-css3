@@ -9,31 +9,68 @@
         #bottom{
             width: 600px;
             height: 400px;
-            text-align: center;
         }
         #canvas{
             position: absolute;
             top: 0;left: 0;
         }
+        p{
+            text-align: center;
+            font-size: 80px;
+            margin-top: 110px;
+        }
     </style>
 </head>
 <body>
-    <div id="bottom">谢谢惠顾</div>
+    <div id="bottom"><p>谢谢惠顾</p></div>
     <canvas id="canvas" width="600" height="400"></canvas>
 </body>
 <script>
+    // 灰色遮罩层
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
-
     context.fillStyle = 'gray';
     context.fillRect(0,0,600,400);
+    context.globalCompositeOperation = 'destination-out';//在与源不重叠的区域保留目标，其他部分变成透明
     // 以指针的坐标做圆
-    var fillCircle = function(x,y,radius){
-        this.fillStyle = '#eee';
-        this.beginPath();
-        this.moveTo(x,y);
-        this.arc(x,y,radius,0,Math.PI*2,false);
-        this.fill();
+    function fillCircle(x,y,radius){
+        context.beginPath();
+        context.arc(x,y,radius,0,Math.PI*2,false);
+        context.closePath();
+        context.fillStyle = '#eee';
+        context.fill();
+    }
+    // 根据像素判断是否达到85%
+    function judgePercent(){
+        var imgData = context.getImageData(0,0,600,400);
+        var pxData = imgData.data;
+        var len = pxData.length;
+        var count = 0;
+        for(var i = 0;i<len;i+=4){
+            var a = pxData[i+3];
+            if(a<10){count ++;}
+        }
+        var percent = count/(len/4);
+        if(percent>=0.85)
+            context.clearRect(0,0,600,400);
+    }
+    canvas.onmousedown = function(event){//判断鼠标是否按下
+        event.preventDefault();
+        ismousedown = true;
+    }
+    canvas.onmouseup = function(event){//判断鼠标是否松开
+        event.preventDefault();
+        ismousedown = false;
+        judgePercent();
+    }
+    canvas.onmousemove = function(event){
+        event.preventDefault();
+        if(ismousedown){
+            var x = event.clientX - canvas.offsetLeft || 0;
+            var y = event.clientY - canvas.offsetTop || 0;
+            fillCircle(x,y,25);
+            judgePercent();
+        }
     }
 </script>
 </html>
