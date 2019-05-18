@@ -5,14 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        .container{
+            width: 400px;
+            height: 600px;
+            
+        }
+        .image{
+            width: 400px;
+            height: 200px;
+            /* background: url(zhanqiao.jpg) no-repeat; */
+            /* background-size: cover; */
+            /* background-origin: border-box; */
+            
+        }
+        .image img:hover{
+            transform: scale(1.3,1.3);
+        }
+        .container div:last-child{
+            position: relative;
+            top:-20px;
+            transition: top 1s ease;
+        }
+        .content :hover{
+            top: -100px;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <img src="" alt="">
-        <div>
+    <div class="container">
+        <div class="image">
+            <img src="zhanqiao.jpg" style="width:400px;height:200px;">
+        </div>
+        <div class="content">
             <h2>青岛栈桥</h2>
-            <p>国家AAAA级旅游景区</p>
-            
+            <p style="color:orange;">国家AAAA级旅游景区</p>
+            <p>青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，
+                也是首批国家AAAA级旅游景区。青岛栈桥位于游人如织的青岛中山路南端，
+                桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+            <span>10分钟前</span>
+            <span>123评论</span>
         </div>
     </div>
 </body>
