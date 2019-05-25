@@ -1,10 +1,50 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="img/snowflake.png" />
+<meta charset="utf-8">
+<title>文档标题</title>
+  <style>
+    h1{
+       
+    }
+    div{
+      width:150px;
+      height:100px;
+      text-align:center;
+      color:transparent;/*设置字体颜色透明*/
+      -webkit-background-clip: text;/*剪除背景中文本以外部分*/
+      background:red;
+      border:5px solid #567577;
+      border-radius:20px;
+      position:relative;
+      margin:5px;
+      
+     /* //animation名是myfrist 10s完成动画 匀速播放 0s延迟 无限播放 奇数次正向播
+     //放偶数次反向播放 播放动画      */
+
+      animation:myfrist 10s linear 0s infinite alternate running;
+      -moz-animation:myfrist 10s linear 2s infinite alternate running;
+      -o-animation:myfrist 10s linear 2s infinite alternate running;
+      -webkit-animation:myfrist 10s linear 2s infinite alternate running;
+    }
+    @keyframes myfrist{
+      0% {border-color:red;background-color:orange;}
+      20%  {border-color:yellow; background-color:yellow;}
+      40%  {border-color:blue; background-color:green;}
+      60%  {border-color:green;background-color:blue; }
+      80% {border-color:red;background-color:indigo; 
+      100%  {border-color:green;background-color:violet; }
+      }
+    }
+  </style>
 </head>
 <body>
+  <div>
+    <h1>
+    123456
+    </h1>
+  </div>
+ </body>
+</html> 
 
-</body>
-</html>
+<!-- 动态渐变字 -->
