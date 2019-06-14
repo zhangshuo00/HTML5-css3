@@ -1,0 +1,10 @@
+.head{
+    margin: 0 auto;
+    width:1328px;
+    background: #282828;
+    color: white;
+}
+.head span{
+    float: right;
+    margin-right: 15px;
+}
