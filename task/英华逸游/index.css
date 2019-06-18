@@ -118,7 +118,102 @@ ul li{
     color:white;
     padding-top: 30px;
 }
+#carPhone{
+    /* float: left; */
+    width: 100%;
+    height: 180px;
+}
+#carPhone ul li{float: left;}
+#carPhone button{
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    background: white;
+    border-radius: 8px;
+    border-style: none;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.carPhone-word{
+    width: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+/*  */
 #hot-route{
     width: 100%;
-    
+    margin-top: 20px;
+}
+#hotRHPone{
+    float: left;
+}
+.hot3{
+    background: rgb(0,0,0,0.5);
+    color:white;
+    height: 55px;
+}
+#hott3{
+    background: url(img/hot3.jpg) no-repeat center;
+    width: 100%;
+    height: 300px;
+    padding:  240px 0 0 0;
+}
+#hott4{
+    background: url(img/hot4.jpg) no-repeat center;
+    width: 100%;
+    height: 300px;
+    padding: 245px 0 0 0;
+}
+#hott5{
+    background: url(img/hot5.jpg) no-repeat center;
+    width: 100%;
+    height: 300px;
+    padding: 245px 0 0 0;
+    margin-top: 15px;
+}
+/*  */
+#visa-recom{
+    margin-top: 30px;
+}
+#visa1{
+    background: url(img/visa1.jpg) no-repeat center;
+    height: 555px;
+    padding: 500px 0 0 0;
+}
+.visa1{
+    background: rgb(0,0,0,0.5);
+    color:white;
+    height: 55px;
+}
+#visa2{
+    background: url(img/visa2.jpg) no-repeat center;
+    width: 100%;
+    height: 275px;
+    padding: 0;
+}
+.visa2{
+    background: rgb(0,0,0,0.5);
+    color:white;
+    /* width: 100%; */
+    height: 55px;
+    margin: 220px 0 0 0;
+}
+#visa3{
+    background: url(img/visa3.jpg) no-repeat center;
+    width: 100%;
+    height: 275px;
+    padding: 0;
+}
+#visa4{
+    background: url(img/visa4.jpg) no-repeat center;
+    width: 100%;
+    height: 275px;
+    padding: 0;
+}
+#visa5{
+    background: url(img/visa5.jpg) no-repeat center;
+    width: 100%;
+    height: 275px;
+    padding: 0;
 }

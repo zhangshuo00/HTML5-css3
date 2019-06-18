@@ -49,7 +49,8 @@
     </div>
     <!-- banner -->
     <div id="myCarousel" class="carousel slide">
-        <button id="search" class="btn"><button class="mudidi btn"><img src="img/position.png" alt="">目的地</button><input type="text" value="| 日本 美国 英国 地中海"><button type="button" class="btn" id="searchR"></button></button>
+        <div id="search">
+            <button class="mudidi btn"><img src="img/position.png" alt="">目的地</button><input type="text" value="| 日本 美国 英国 地中海"><button type="button" class="btn" id="searchR"></button></div>
         <div class="carousel-inner" style="width: 100%;">
             <div id="banner-word">
                 <span>悠游古欧洲  遍览德法瑞意</span>
@@ -93,10 +94,141 @@
             </ul>
         </div>
     </div>
+    <!-- carPhone -->
+    <div id="carPhone">
+        <ul>
+            <li style="padding-top:20px;"><img src="img/carH.png" class="img-responsive" alt="Responsive img"></li>
+            <div class="carPhone-word">
+                <p style="font-size: 20px;color:#1c5080;">机场接送 省钱省心</p>
+                <p>提供上海、苏州、无锡各市</p>
+                <p>往返机场、码头接送服务，更有包车服务</p>
+            </div>
+            <li><button>查看详情</button></li>
+        </ul>
+    </div>
+
     <!-- 热门线路 -->
     <div id="hot-route">
-        <p style="font-size: 30px;text-align:center">热 门 线 路</p>
-        <p style="font-size: 20px;text-align:center;">Popular tourist routes</p>
+        <div id="hotRouteHead">
+            <div id="hotRHCom">
+                <p style="font-size: 30px;text-align:center;">热 门 线 路</p>
+                <p style="font-size: 20px;text-align:center;">Popular tourist routes</p>
+            </div>
+            <div id="hotRHPhone">
+                <img src="img/orangeLine.jpg" alt="">
+                <span style="font-size: 20px;padding-left:15px;">热门线路</span>
+            </div>
+        </div>
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <!-- 海南三亚 -->
+                        <div class="col-md-12" style="height: 460px;">
+                            <img src="img/hot1.jpg" width="100%"height="400px">
+                            <div style="background-color: black;color:white">
+                                <p>海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
+                                <p>￥<span style="font-size: 20px;">2580</span>/人起</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="img/hot2.jpg"width="100%"height="400px">
+                            <div style="background-color: black;color:white">
+                                <p>德法意瑞欧洲4国，ABCD任意线路由您挑选</p>
+                                <p>￥<span style="font-size: 20px;">7999</span>/人起</p>
+                            </div>
+                            <button id="hotMore" style="margin-left: 200px;width: 180px;height:50px;border-radius: 10px;background: white;">查看更多 ></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="height: 100px;" id="hotRowTo">
+                    <div class="row">
+                        <div class="col-md-12" id="hott3">
+                            <div class="hot3">
+                                <p>曼谷+芭堤雅 国际五星，赠送2220大礼包，绝无自费</p>
+                                <p>￥<span style="font-size: 20px;">2799</span>/人起</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="hott4">
+                            <div class="hot3">
+                                <p>日本本州游 樱花、寿司、温泉、美食</p>
+                                <p>￥<span style="font-size: 20px;">5399</span>/人起</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="hott5">
+                            <div class="hot3">
+                                <p>斯里兰卡7天6晚全景游 保证入住两晚香格里拉</p>
+                                <p>￥<span style="font-size: 20px;">7999</span>/人起</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 签证推荐 -->
+    <div id="visa-recom">
+        <div id="visaRecomHead">
+            <div id="visaRHCom">
+                <p style="font-size: 30px;text-align:center;">签 证 推 荐</p>
+                <p style="font-size: 20px;text-align:center;">Visa Recommendation</p>
+                <p style="font-size: 15px;text-align:center;">热门：日本 马来西亚 美国 意大利 加拿大 新加坡</p>
+            </div>
+            <div id="visaRHPhone">
+                <img src="img/orangeLine.jpg" alt="">
+                <span style="font-size: 20px;padding-left:15px;">签证推荐</span>
+            </div>
+        </div>
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" id="visa1">
+                    <div class="visa1">
+                        <p style="padding-top: 20px;padding-left: 15px;">日本旅游签证 ￥<span style="font-size: 20px;">420</span>/人</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12" id="visa2">
+                            <div class="visa2">
+                                <p style="padding-top: 20px;padding-left: 15px;">新加坡旅游签证 ￥<span style="font-size: 20px;">370</span>/人</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="visa3">
+                            <div class="visa2">
+                                <p style="padding-top: 20px;padding-left: 15px;">申根旅游签证 ￥<span style="font-size: 20px;">999</span>/人</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="visaPhone">
+                        <div class="row">
+                                <div class="col-md-12" id="visa4">
+                                    <div class="visa2">
+                                        <p style="padding-top: 20px;padding-left: 15px;">马来西亚旅游签证 ￥<span style="font-size: 20px;">450</span>/人</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="visa5">
+                                    <div class="visa2">
+                                        <p style="padding-top: 20px;padding-left: 15px;">美国旅游签证 ￥<span style="font-size: 20px;">1380</span>/人</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

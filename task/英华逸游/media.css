@@ -3,11 +3,25 @@
     #banner-word{display: none;}
     #banner-wordPhone{display: block;}
     #search{
-        /* display: none; */
-        width: 200px;
-        left: 50px;
+        display: none;
     }
+    #car{
+        display: none;
+    }
+    #carPhone{display: block;}
+    #hotRHCom{display: none;}
+    #hotRHPhone{display: block;}
+    /* [id ^= hott]{display: none;} */
+    #hotRowTo{display: none;}
+    #visaRHCom{display: none;}
+    #visaRHPhone{display: block;}
+    #visaPhone{display: none;}
 }
 @media screen and (min-width:1427px){
     #banner-wordPhone{display: none;}
+    #carPhone{display: none;}
+    #hotRHCom{display: block;}
+    #hotRHPhone{display: none;}
+    #hotMore{display: none;}
+    #visaRHPhone{display: none;}
 }
