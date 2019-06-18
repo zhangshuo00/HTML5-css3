@@ -1,0 +1,13 @@
+@media screen and (max-width:750px){
+    #top{display: none;}
+    #banner-word{display: none;}
+    #banner-wordPhone{display: block;}
+    #search{
+        /* display: none; */
+        width: 200px;
+        left: 50px;
+    }
+}
+@media screen and (min-width:1427px){
+    #banner-wordPhone{display: none;}
+}

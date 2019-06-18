@@ -3,7 +3,6 @@ ul li{
     padding: 0;
     margin: 0;
 }
-
 .top{
     width:100%;
     height: 35px;
@@ -23,29 +22,18 @@ ul li{
     margin-left: 100px;
     position: absolute;
     z-index: 99999;
-    background: white;
+    background: #dddddd;
     left: 350px;
 }
 #nav{
     width: 100%;
-    background: white;
-    border-color: white;
+    background: #dddddd;
+    border-color: #dddddd;
 }
 #navbar-toggle span{
     background-color: black;
 }
-@media screen and (max-width:750px){
-    #top{display: none;}
-    #banner-word{display: none;}
-    #banner-wordPhone{display: block;}
-    #search{
-        /* display: none; */
-        /* width: 200px; */
-    }
-}
-@media screen and (min-width:1427px){
-    #banner-wordPhone{display: none;}
-}
+
 /*  */
 #prev{
     background: url(img/left.png) no-repeat center;
@@ -75,37 +63,29 @@ ul li{
     float: left;
 }
 #search{
-    width: 588px;
-    height: 55px;
     position: absolute;
-    z-index: 9999;
-    top:350px;
-    left:500px;
+    z-index: 999;
+    left: 500px;
+    top: 300px;
+    width: 580px;
+    height: 50px;
     float: left;
 }
 .mudidi{
-    background: #d3d3d8 url(img/position.png) no-repeat center;
-    width:150px;
-    height: 55px;
-    padding: 0;
-    border-radius: 5px;
+    width:100px;
+    height: 50px;
+    background: #d3d3d8;
 }
-.textSearch{
-    color: #d3d3d8;
-    font-size: 18px;
-    position:absolute;
-    top:-1px;
-    width:300px;
-    height: 55px;
-    /* border-color: white; */
+#search input{
+    width: 310px;
+    height: 50px;
 }
-.btnSearch{
-    position: absolute;
+#search button{
+    height: 50px;
+}
+#searchR{
+    width:130px;
     background: #cb5405 url(img/search.png) no-repeat center;
-    border-radius: 5px;
-    width:120px;
-    height: 55px;
-    left: 450px;
 }
 /*  */
 #car{
