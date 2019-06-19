@@ -172,6 +172,21 @@ ul li{
     padding: 245px 0 0 0;
     margin-top: 15px;
 }
+#hotMore{
+    /* margin-left: 200px; */
+    width: 180px;
+    height:50px;
+    border-radius: 10px;
+    background: white;
+    position: relative;
+    left: 50%;
+    top: 30px;
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);
+}
 /*  */
 #visa-recom{
     margin-top: 30px;
@@ -185,35 +200,146 @@ ul li{
     background: rgb(0,0,0,0.5);
     color:white;
     height: 55px;
+    width: 400px;
+    margin: 0 auto;
 }
 #visa2{
-    background: url(img/visa2.jpg) no-repeat center;
-    width: 100%;
-    height: 275px;
+    width: 400px;
     padding: 0;
+    margin: 0 auto;
 }
 .visa2{
     background: rgb(0,0,0,0.5);
     color:white;
-    /* width: 100%; */
+    width: 390px;
+    /* margin: 0 auto; */
     height: 55px;
-    margin: 220px 0 0 0;
+    margin-top: 220px;
 }
 #visa3{
-    background: url(img/visa3.jpg) no-repeat center;
-    width: 100%;
-    height: 275px;
     padding: 0;
+    width: 400px;
+    margin: 0 auto;
 }
 #visa4{
-    background: url(img/visa4.jpg) no-repeat center;
     width: 100%;
-    height: 275px;
     padding: 0;
 }
 #visa5{
     background: url(img/visa5.jpg) no-repeat center;
     width: 100%;
-    height: 275px;
     padding: 0;
+}
+/*  */
+#Bbanner{
+    margin: 0 auto;
+    width: 100%;
+    height: 340px;
+    background: url(img/Bbanner.jpg) no-repeat center;
+    margin-top: 20px;
+}
+/*  */
+#callAndWish{
+    margin-top: 35px;
+}
+#searve-word{
+    height: 320px;
+    background: #1c5080;
+    color:white;
+    font-family: '宋体'
+}
+#searve-word ul{
+    margin-top: 80px;
+    width: 80%;
+    margin-left: 50px;
+    padding-left: 0;
+}
+#pinzhi{
+    text-align: center;
+    margin-top: 30px;
+}
+#pinzhi li{
+    padding-top: 50px;
+    width: 210px;
+}
+#searve-first{
+    background: #1c5080;
+    color: white;
+}
+#pinzhiPhone{
+    height: 100px;
+    margin-top: 20px;
+}
+/*  */
+#last{
+	width: 100%;
+	height: 370px;
+	margin: 0 auto;
+	background-color: #000000;
+	text-align: center;
+	border-bottom: 3px solid #404040;
+}
+#last ul{
+	margin-top: 35px;
+	margin-left: 120px;
+	color: #ffffff;
+	background: #000000;
+	border : 1px solid #000000;
+	float: left;
+}
+#last ul.one{
+	margin-left: 20px;
+}
+#last li{
+	margin-bottom: 15px;
+	float: left;
+}
+#last li.one{
+	clear: both;
+	font-size: 14px;
+}
+#last li.two{
+	font-size: 18px;
+}
+#last li.three{
+	clear: both;
+	font-size: 14px;
+	padding-left: 30px;
+}
+#last li.four{
+	clear: both;
+	font-size: 14px;
+	padding-left: 3px;
+}
+#last p{
+	font-size:14px;
+	font-family: '微软雅黑';
+	line-height: 25px;
+	text-align:left;
+	color: #b5b5b5;
+}
+#last p.chujing{
+	padding-left: 98px;
+}
+#last p span{
+	font-size:18px;
+	font-family: '微软雅黑';
+	margin-right: 25px;
+	color: #ffffff;
+}
+.last1{
+	width: 100%;
+	height: 160px;
+	margin: 0 auto;
+	background-color: #000000;
+	text-align: center;
+}
+.last1 p{
+	color: #ffffff;
+	font-size:14px;
+	font-family: '微软雅黑';
+	line-height: 30px;
+}
+.last1 p.one{
+	padding-top:45px ;
 }

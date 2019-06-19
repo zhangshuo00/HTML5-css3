@@ -2,12 +2,8 @@
     #top{display: none;}
     #banner-word{display: none;}
     #banner-wordPhone{display: block;}
-    #search{
-        display: none;
-    }
-    #car{
-        display: none;
-    }
+    #search{display: none;}
+    #car{display: none;}
     #carPhone{display: block;}
     #hotRHCom{display: none;}
     #hotRHPhone{display: block;}
@@ -16,6 +12,20 @@
     #visaRHCom{display: none;}
     #visaRHPhone{display: block;}
     #visaPhone{display: none;}
+    #Bbanner{display: none;}
+    #callAWHCom{display: none;}
+    #searve-word{
+        background: none;
+        color:black;
+    }
+    #pinzhi{display: none;}
+    #searve-first{
+        background: white;
+        color:black;
+    }
+    #last{
+        display: none;
+    }
 }
 @media screen and (min-width:1427px){
     #banner-wordPhone{display: none;}
@@ -24,4 +34,6 @@
     #hotRHPhone{display: none;}
     #hotMore{display: none;}
     #visaRHPhone{display: none;}
+    #callAWHPhone{display: none;}
+    #pinzhiPhone{display: none;}
 }
