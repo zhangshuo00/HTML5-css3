@@ -2,7 +2,8 @@
     #top{display: none;}
     #banner-word{display: none;}
     #banner-wordPhone{display: block;}
-    #search{display: none;}
+    #searchR{width: 100px;}
+    #search input{width: 200px;}
     #car{display: none;}
     #carPhone{display: block;}
     #hotRHCom{display: none;}

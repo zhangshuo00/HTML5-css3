@@ -33,7 +33,12 @@ ul li{
 #navbar-toggle span{
     background-color: black;
 }
-
+#quick{
+    background: #e8420a;
+    color:white;
+    position: absolute;
+    left: 450px;
+}
 /*  */
 #prev{
     background: url(img/left.png) no-repeat center;
@@ -63,13 +68,9 @@ ul li{
     float: left;
 }
 #search{
-    position: absolute;
-    z-index: 999;
-    left: 500px;
-    top: 300px;
-    width: 580px;
-    height: 50px;
-    float: left;
+
+}
+#search1{
 }
 .mudidi{
     width:100px;
@@ -79,6 +80,7 @@ ul li{
 #search input{
     width: 310px;
     height: 50px;
+    border: none;
 }
 #search button{
     height: 50px;
@@ -86,15 +88,17 @@ ul li{
 #searchR{
     width:130px;
     background: #cb5405 url(img/search.png) no-repeat center;
+    border: none;
 }
 /*  */
 #car{
     float: left;
     width: 100%;
 }
-#car1{
-    margin-left: 150px;
+#generic{
+    width:60%;
     float: left;
+    margin-left: 180px;
 }
 .car2{
     background: #15316d;
